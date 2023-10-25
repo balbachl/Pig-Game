@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Pig</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Pig.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <header class="p-3 m-3 text-center">
+            <h1>Let's Play PIG!</h1>
+        </header>
+        <main role="main">
+            @RenderBody()
+
+            @if (TempData.Keys.Contains("message"))
+            {
+                <h2 class="bg-dark text-white text-center p-4 mt-4">@TempData["message"]</h2>
+            }
+        </main>
+    </div>
+</body>
+</html>
